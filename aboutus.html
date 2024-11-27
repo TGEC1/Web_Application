@@ -9,6 +9,163 @@
     
     <title>Welcome Application</title>
 
+<style>
+
+.navbar {
+  position: sticky; 
+  top: 0; 
+  background-color: #0E343E; 
+  color: white; 
+  z-index: 1000; 
+  padding: 10px; 
+}
+
+
+
+.navbar-brand {
+    color: #ffffff !important;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+      color: #ffffff !important; 
+    }
+
+  
+    .container-fluid {
+        padding-left: 15rem;
+        padding-right: 0;
+      }
+      
+      .navbar-nav {
+        margin-left: 20rem; 
+        color: rgb(240, 240, 240);
+        margin-right: 0;  
+      }
+      
+      
+      .navbar-nav .nav-item {
+        margin-right: 5rem; 
+      }
+
+      
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff !important; 
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  .navbar-nav .nav-item .nav-link:active {
+    color: #bdb35c !important; 
+    background-color: #0beec8;  
+  }
+
+  body {
+    background: linear-gradient(to right, #1B1931, #44174E, #662249, #A34054, #ED9E59, #E9BCB9);
+}
+
+  body {
+    color: white; 
+}
+
+  section {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.3s forwards; 
+ 
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+   
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+section ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+   
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.navbar-brand {
+  color: rgb(163, 163, 83) !important;  
+  font-weight: bold !important; 
+}
+
+
+
+.main-container {
+    border: 3px solid #0E343E; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 30px auto; 
+    max-width: 1200px; 
+    background-color: #0E343E;
+}
+
+
+.main-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#about, #games {
+    padding: 20px; 
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+</style>
+
 </head>
 
 <nav class="navbar navbar-expand-lg" style="background-color: #0E343E;">
