@@ -7,4 +7,13 @@ class Game {
         this.game_link = game_link;
     }
 
+    getGameDetails() {
+        return {
+            name: this.game_name,
+            description: this.game_description,
+            image: this.game_image || './default-image.jpg',
+            link: this.game_link
+        };
+    }
+
 }
