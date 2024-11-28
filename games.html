@@ -86,6 +86,58 @@ body {
     height: 80%; 
 }
 
+.navbar-brand {
+  color: rgb(163, 163, 83) !important;  
+  font-weight: bold !important; 
+}
+
+@keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .card {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .card:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+        .card:nth-child(5) {
+            animation-delay: 1s;
+        }
+        .card:nth-child(6) {
+            animation-delay: 1.2s;
+        }
+        .card:nth-child(7) {
+            animation-delay: 1.4s;
+        }
+        .card:nth-child(8) {
+            animation-delay: 1.6s;
+        }
+        .card:nth-child(9) {
+            animation-delay: 1.8s;
+        }
 
 
 </style>
