@@ -52,3 +52,26 @@ class OutdoorGame extends Game {
         `;
     }
 }
+
+class StreetGame extends Game {
+    constructor(game_id, game_name, game_description, game_image, game_link, team_size) {
+        super(game_id, game_name, game_description, game_image, game_link);
+        this.team_size = team_size; // Additional property for street games
+    }
+
+    // Overriding renderCard for StreetGame (Polymorphism)
+    renderCard() {
+        const details = this.getGameDetails();
+        return `
+            <div class="card">
+                <img src="${details.image}" class="card-img-top" alt="${details.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${details.name} - Team Size: ${this.team_size}</h5>
+                    <p class="card-text">${details.description}</p>
+                    <a href="${details.link}" class="btn btn-primary">Click</a>
+                </div>
+            </div>
+        `;
+    }
+}
+
