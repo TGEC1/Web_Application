@@ -16,4 +16,18 @@ class Game {
         };
     }
 
+    renderCard() {
+        const details = this.getGameDetails();
+        return `
+            <div class="card">
+                <img src="${details.image}" class="card-img-top" alt="${details.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${details.name}</h5>
+                    <p class="card-text">${details.description}</p>
+                    <a href="${details.link}" class="btn btn-primary">Click</a>
+                </div>
+            </div>
+        `;
+    }
+
 }
