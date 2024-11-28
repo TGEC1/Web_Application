@@ -8,6 +8,224 @@
 
     <title>Company Wesbsite</title>
 
+<style>
+
+.navbar {
+  position: sticky; 
+  top: 0; 
+  background-color: #0E343E; 
+  color: white; 
+  z-index: 1000; 
+  padding: 10px; 
+}
+
+
+
+.navbar-brand {
+    color: #ffffff !important;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+      color: #ffffff !important; 
+    }
+
+  
+    .container-fluid {
+        padding-left: 15rem;
+        padding-right: 0;
+      }
+      
+      .navbar-nav {
+        margin-left: 20rem; 
+        color: rgb(240, 240, 240);
+        margin-right: 0;  
+      }
+      
+      
+      .navbar-nav .nav-item {
+        margin-right: 5rem; 
+      }
+
+      
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff !important; 
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  .navbar-nav .nav-item .nav-link:active {
+    color: #bdb35c !important; 
+    background-color: #0beec8;  
+  }
+
+  body {
+    background: linear-gradient(to right, #1B1931, #44174E, #662249, #A34054, #ED9E59, #E9BCB9);
+}
+
+.navbar-brand {
+        color: rgb(163, 163, 83) !important;  
+        font-weight: bold !important; 
+      }
+
+      header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #ccc;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-details {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-details h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-align: center;
+            color: #333;
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .game-info img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .game-info img:hover {
+            transform: scale(1.05); 
+        }
+
+        .game-info .text-content {
+            flex: 1;
+            margin-left: 20px;
+            padding: 20px;
+        }
+
+        .game-info h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2b2b2b;
+        }
+
+        .game-info p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        #carousel {
+            margin-top: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-item {
+            transition: transform 0.5s ease;
+            height: 500px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 15px;
+            width: 70%;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-caption p {
+            margin: 0;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(80%);
+        }
+
+        .btn-custom {
+            background-color: #007f7f;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border-radius: 25px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #00b8b8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            .game-details {
+                padding: 15px;
+            }
+
+            .game-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .carousel-item {
+                height: 250px;
+            }
+
+            .carousel-caption {
+                font-size: 1rem;
+                width: 85%;
+                padding: 10px;
+            }
+        }      
+
+</style>
+
 </head>
 
 <nav class="navbar navbar-expand-lg" style="background-color: #0E343E;">
