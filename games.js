@@ -94,7 +94,17 @@ function renderGames(games) {
         gameCard.classList.add("col-12", "col-md-4", "mb-4");
 
         gameCard.innerHTML = game.renderCard();
-        
+
         gamesList.appendChild(gameCard);
     });
 }
+
+document.getElementById("gameSearchBar").addEventListener("input", function(e) {
+    const query = e.target.value.toLowerCase();
+    const filteredGames = games.filter(game =>
+        game.game_name.toLowerCase().includes(query) || game.game_description.toLowerCase().includes(query)
+    );
+    renderGames(filteredGames);
+});
+
+renderGames(games);
