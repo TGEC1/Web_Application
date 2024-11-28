@@ -165,8 +165,29 @@
         font-weight: bold !important; 
       }
       
-      
-      
+      card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+        border: 5px solid transparent; /
+    }
+
+    
+    .card:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        border-color: #ff0000; 
+    }
+
+    
+    .card:active, .card:focus {
+        border-color: #ff0000;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    
+    .card-body a:hover {
+        background-color: #ffd000; 
+    }
+    
       
       
       
