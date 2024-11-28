@@ -85,3 +85,16 @@ const games = [
     new OutdoorGame(8, "Kadang-Kadang", "A traditional Filipino game that involves balancing on bamboo stilts while walking.", "./", "./kadangkadang.html", "Easy"),
     new StreetGame(9, "Agawan Base", "A Filipino team game where players try to take over the opponent's base without being tagged.", "./pictures/agawan_base.jpg", "./agawanbase.html", 4)
 ];
+
+function renderGames(games) {
+    const gamesList = document.getElementById("games-list").querySelector(".row");
+    gamesList.innerHTML = '';  
+    games.forEach(game => {
+        const gameCard = document.createElement("div");
+        gameCard.classList.add("col-12", "col-md-4", "mb-4");
+
+        gameCard.innerHTML = game.renderCard();
+        
+        gamesList.appendChild(gameCard);
+    });
+}
