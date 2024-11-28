@@ -46,9 +46,8 @@
     }
     
     body {
-      background: #008080;
-    }
-
+      background: linear-gradient(to right, #1B1931, #44174E, #662249, #A34054, #ED9E59, #9e6f6d);
+  }
       header {
         color: rgb(255, 255, 255);
         text-align: center;
@@ -71,17 +70,18 @@
       }
       
       header h1 {
-        font-size: 4em;
+        font-size: 2.5em;
         margin: 0;
         padding: 0;
         color: white;
         text-align: left;
         margin-left: 20px;
-        margin-top: 5rem;  
+        margin-top: 5rem; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
       }
       
       header p {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 300;
         margin: 0;
         padding: 0;
@@ -89,6 +89,7 @@
         text-align: left;
         margin-left: 20px;
         margin-bottom: 2rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
       }
       
       .mission {
@@ -113,25 +114,28 @@
       }
       
       .mission h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         font-weight: 700;
         color: white;
         text-align: left; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
       }
 
       .mission p {
-        font-size: 3em;
+        font-size: 2em;
         font-weight: 700;
         color: white;
         text-align: left; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
       }
 
       h2 {
-        font-size: 3em;
+        font-size: 2.5em;
         text-align: center;
         margin-top: 2rem;
         margin-bottom: 2rem;
         color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
     }
     
     .card {
