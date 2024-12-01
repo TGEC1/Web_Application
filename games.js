@@ -69,7 +69,7 @@ class StreetGame extends Game {
 const games = [
     new OutdoorGame(1, "Tumbang Preso", "./picture/lata3.jpg", "./tumbangpreso.html"),
     new StreetGame(2, "Taguan", "./picture/tagu2.jpg", "./taguan.html"),
-    new OutdoorGame(3, "Sipa", "./picture/sipa3.jpg", "./sipa.html"),
+    new OutdoorGame(3, "Takyan", "./picture/sipa3.jpg", "./sipa.html"),
     new StreetGame(4, "Piko", "./picture/piko3.jpg", "./piko.html"),
     new OutdoorGame(5, "Patintero", "./picture/paten2.jpg", "./patentiro.html"),
     new StreetGame(6, "Luksong Tinik", "./picture/tinik4.jpg", "./luksongtinik.html"),
