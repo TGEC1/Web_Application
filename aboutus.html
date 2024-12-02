@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    
+    <title>Welcome Application</title>
+
+<style>
+
+.navbar {
+  position: sticky; 
+  top: 0; 
+  background-color: #0E343E; 
+  color: white; 
+  z-index: 1000; 
+  padding: 10px; 
+}
+
+
+
+.navbar-brand {
+    color: #ffffff !important;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+      color: #ffffff !important; 
+    }
+
+  
+    .container-fluid {
+        padding-left: 15rem;
+        padding-right: 0;
+      }
+      
+      .navbar-nav {
+        margin-left: 20rem; 
+        color: rgb(240, 240, 240);
+        margin-right: 0;  
+      }
+      
+      
+      .navbar-nav .nav-item {
+        margin-right: 5rem; 
+      }
+
+      
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff !important; 
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  .navbar-nav .nav-item .nav-link:active {
+    color: #bdb35c !important; 
+    background-color: #0beec8;  
+  }
+
+  body {
+      background: linear-gradient(to right, #1B1931, #44174E, #662249, #A34054, #ED9E59, #9e6f6d);
+  }
+
+  body {
+    color: white; 
+}
+
+  section {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.3s forwards; 
+ 
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+   
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+section ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+   
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+.navbar-brand {
+  color: rgb(163, 163, 83) !important;  
+  font-weight: bold !important; 
+}
+
+
+
+.main-container {
+    border: 3px solid #0E343E; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 30px auto; 
+    max-width: 1200px; 
+    background-color: #0E343E;
+}
+
+
+.main-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#about, #games {
+    padding: 20px; 
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    font-size: 2.5em;
+}
+
+h1 {
+            font-size: 2em; 
+            text-align: center; 
+}
+
+</style>
+
+</head>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #0E343E;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TGEC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./games.html">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./aboutus.html">About</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<body>
+
+    <h2>About Us</h2>
+
+
+<div class="main-container">
+  <div class="container">
+      <h1>Welcome to <span class="highlight">Traditional Games for Every Child (TGEC)</span></h1>
+  </div>
+
+  <main>
+      <section id="about">
+          <div class="container">
+              <p><strong>Welcome to Traditional Games for Every Child (TGEC)!</strong></p>
+              <p>At TGEC, we believe that play is more than just fun—it's a bridge to culture, learning, and connection. Our mission is to revive and share the rich tradition of Filipino games, bringing them to children, families, and communities around the world. By promoting these classic, time-honored games, we aim to foster physical activity, teamwork, creativity, and a deeper understanding of cultural heritage.</p>
+
+              <h3>Why Traditional Games?</h3>
+              <p>In today's digital age, children are often more connected to screens than to the outdoors or to each other. Traditional Filipino games offer a unique opportunity to unplug, get active, and bond with others in a meaningful way. These games not only provide hours of entertainment but also teach important values such as cooperation, sportsmanship, and respect for others.</p>
+
+              <h3>Our Goal</h3>
+              <p>Our goal at TGEC is simple: to make traditional Filipino games accessible and enjoyable for children everywhere. Whether you're a parent, teacher, or community leader, we provide clear instructions, fun ideas, and helpful tips to integrate these games into everyday life. We hope to spark a sense of nostalgia for those who grew up playing these games and introduce them to new generations.</p>
+
+              <h3>What We Offer</h3>
+              <ul>
+                  <li><strong>Game Instructions:</strong> Detailed, easy-to-follow steps for a variety of traditional Filipino games.</li>
+                  <li><strong>Cultural Insights:</strong> Learn the history and significance behind each game.</li>
+                  <li><strong>Community Engagement:</strong> Ideas for organizing local events, school activities, and family gatherings centered around traditional play.</li>
+                  <li><strong>Fun for All Ages:</strong> While focused on children, our games can be enjoyed by people of all ages, creating opportunities for intergenerational play.</li>
+              </ul>
+
+              <h3>Join Us on Our Journey</h3>
+              <p>We invite you to explore our collection of games, share your experiences, and be part of a growing community that celebrates the timeless joy of traditional Filipino play. Whether you're revisiting beloved childhood games or discovering new ones, TGEC is here to inspire laughter, learning, and lasting memories.</p>
+              <p>Thank you for visiting, and we hope you enjoy rediscovering the games that bring generations together!</p>
+          </div>
+      </section>
+  </main>
+</div>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <p>&copy; 2024 TGEC. All Rights Reserved.</p>
+</footer>
+
+    
+</body>
+</html>
