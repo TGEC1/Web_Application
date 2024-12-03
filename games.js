@@ -1,11 +1,13 @@
+// Encapsulation: Grouping related properties and methods together in the Game class
 class Game {
     constructor(game_id, game_name, game_image, game_link) {
-        this.game_id = game_id;
+        this.game_id = game_id;  // Encapsulating game properties
         this.game_name = game_name;
         this.game_image = game_image;
         this.game_link = game_link;
     }
-
+    
+    // Abstraction: Hides the internal details of how game information is stored, only exposes relevant information through the method
     getGameDetails() {
         return {
             name: this.game_name,
@@ -14,8 +16,9 @@ class Game {
         };
     }
 
+    // Encapsulation: This method is part of the Game class, providing the functionality to render a game card
     renderCard() {
-        const details = this.getGameDetails();
+        const details = this.getGameDetails(); // Encapsulated logic to fetch game details
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -28,13 +31,15 @@ class Game {
     }
 }
 
+// Inheritance: OutdoorGame inherits from Game and shares common properties and methods
 class OutdoorGame extends Game {
     constructor(game_id, game_name, game_image, game_link) {
-        super(game_id, game_name, game_image, game_link);
+        super(game_id, game_name, game_image, game_link); // Inherited constructor from Game class
     }
 
+    // Polymorphism: Override renderCard method to provide specialized implementation if needed
     renderCard() {
-        const details = this.getGameDetails();
+        const details = this.getGameDetails(); // Reuse parent class method
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -47,13 +52,15 @@ class OutdoorGame extends Game {
     }
 }
 
+// Inheritance: StreetGame inherits from Game and shares common properties and methods
 class StreetGame extends Game {
     constructor(game_id, game_name, game_image, game_link) {
-        super(game_id, game_name, game_image, game_link);
+        super(game_id, game_name, game_image, game_link); // Inherited constructor from Game class
     }
 
+    // Polymorphism: Override renderCard method to provide specialized implementation if needed
     renderCard() {
-        const details = this.getGameDetails();
+        const details = this.getGameDetails(); // Reuse parent class method
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -66,37 +73,53 @@ class StreetGame extends Game {
     }
 }
 
-const games = [
-    new OutdoorGame(1, "Tumbang Preso", "./picture/lata3.jpg", "./tumbangpreso.html"),
-    new StreetGame(2, "Taguan", "./picture/tagu2.jpg", "./taguan.html"),
-    new OutdoorGame(3, "Takyan", "./picture/sipa3.jpg", "./sipa.html"),
-    new StreetGame(4, "Piko", "./picture/piko3.jpg", "./piko.html"),
-    new OutdoorGame(5, "Patintero", "./picture/paten2.jpg", "./patentiro.html"),
-    new StreetGame(6, "Luksong Tinik", "./picture/tinik4.jpg", "./luksongtinik.html"),
-    new OutdoorGame(7, "Luksong Baka", "./picture/baak3.jpg", "./luksongbaka.html"),
-    new OutdoorGame(8, "Langit Lupa", "./picture/lupa4.jpg", "./langitlupa.html"),
-    new StreetGame(9, "Agawan Base", "./picture/base4.jpg", "./agawanbase.html")
-];
+// Function to fetch data about games and create appropriate game objects based on type
+function fetchGames() {
+    fetch('games.json')
+        .then(response => response.json())
+        .then(data => {
+            const games = data.map(gameData => {
+                // Encapsulation: Decision logic is abstracted to choose the correct game type
+                return gameData.type === 'OutdoorGame' 
+                    ? new OutdoorGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link)
+                    : new StreetGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link);
+            });
+            renderGames(games); // Encapsulated logic to render all games
+        })
+        .catch(error => console.error('Error fetching games:', error));
+}
 
+// Function to render the list of games in the DOM
 function renderGames(games) {
     const gamesList = document.getElementById("games-list").querySelector(".row");
-    gamesList.innerHTML = '';  
+    gamesList.innerHTML = '';  // Clears existing games
     games.forEach(game => {
         const gameCard = document.createElement("div");
         gameCard.classList.add("col-12", "col-md-4", "mb-4");
-
-        gameCard.innerHTML = game.renderCard();
-
+        gameCard.innerHTML = game.renderCard();  // Encapsulation: Reuse renderCard for each game object
         gamesList.appendChild(gameCard);
     });
 }
 
+// Event listener to filter games based on user input
 document.getElementById("gameSearchBar").addEventListener("input", function(e) {
     const query = e.target.value.toLowerCase();
-    const filteredGames = games.filter(game =>
-        game.game_name.toLowerCase().includes(query)
-    );
-    renderGames(filteredGames);
+    fetch('games.json')
+        .then(response => response.json())
+        .then(data => {
+            const filteredGames = data.filter(game =>
+                game.game_name.toLowerCase().includes(query)
+            );
+            const games = filteredGames.map(gameData => {
+                // Encapsulation: Create filtered games with correct types
+                return gameData.type === 'OutdoorGame' 
+                    ? new OutdoorGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link)
+                    : new StreetGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link);
+            });
+            renderGames(games); // Encapsulated logic to render filtered games
+        })
+        .catch(error => console.error('Error filtering games:', error));
 });
 
-renderGames(games);
+// Initial call to fetch and render games
+fetchGames();

@@ -1,0 +1,65 @@
+[
+    {
+        "game_id": 1,
+        "game_name": "Tumbang Preso",
+        "game_image": "./picture/lata3.jpg",
+        "game_link": "./tumbangpreso.html",
+        "type": "OutdoorGame"
+    },
+    {
+        "game_id": 2,
+        "game_name": "Taguan",
+        "game_image": "./picture/tagu2.jpg",
+        "game_link": "./taguan.html",
+        "type": "StreetGame"
+    },
+    {
+        "game_id": 3,
+        "game_name": "Takyan",
+        "game_image": "./picture/sipa3.jpg",
+        "game_link": "./sipa.html",
+        "type": "OutdoorGame"
+    },
+    {
+        "game_id": 4,
+        "game_name": "Piko",
+        "game_image": "./picture/piko3.jpg",
+        "game_link": "./piko.html",
+        "type": "StreetGame"
+    },
+    {
+        "game_id": 5,
+        "game_name": "Patintero",
+        "game_image": "./picture/paten2.jpg",
+        "game_link": "./patentiro.html",
+        "type": "OutdoorGame"
+    },
+    {
+        "game_id": 6,
+        "game_name": "Luksong Tinik",
+        "game_image": "./picture/tinik4.jpg",
+        "game_link": "./luksongtinik.html",
+        "type": "StreetGame"
+    },
+    {
+        "game_id": 7,
+        "game_name": "Luksong Baka",
+        "game_image": "./picture/baak3.jpg",
+        "game_link": "./luksongbaka.html",
+        "type": "OutdoorGame"
+    },
+    {
+        "game_id": 8,
+        "game_name": "Langit Lupa",
+        "game_image": "./picture/lupa4.jpg",
+        "game_link": "./langitlupa.html",
+        "type": "OutdoorGame"
+    },
+    {
+        "game_id": 9,
+        "game_name": "Agawan Base",
+        "game_image": "./picture/base4.jpg",
+        "game_link": "./agawanbase.html",
+        "type": "StreetGame"
+    }
+]
