@@ -18,7 +18,7 @@ class Game {
 
     // Encapsulation: This method is part of the Game class, providing the functionality to render a game card
     renderCard() {
-        const details = this.getGameDetails(); // Encapsulated logic to fetch game details
+        const details = this.getGameDetails();
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -34,12 +34,12 @@ class Game {
 // Inheritance: OutdoorGame inherits from Game and shares common properties and methods
 class OutdoorGame extends Game {
     constructor(game_id, game_name, game_image, game_link) {
-        super(game_id, game_name, game_image, game_link); // Inherited constructor from Game class
+        super(game_id, game_name, game_image, game_link);
     }
 
     // Polymorphism: Override renderCard method to provide specialized implementation if needed
     renderCard() {
-        const details = this.getGameDetails(); // Reuse parent class method
+        const details = this.getGameDetails(); 
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -55,12 +55,12 @@ class OutdoorGame extends Game {
 // Inheritance: StreetGame inherits from Game and shares common properties and methods
 class StreetGame extends Game {
     constructor(game_id, game_name, game_image, game_link) {
-        super(game_id, game_name, game_image, game_link); // Inherited constructor from Game class
+        super(game_id, game_name, game_image, game_link);
     }
 
     // Polymorphism: Override renderCard method to provide specialized implementation if needed
     renderCard() {
-        const details = this.getGameDetails(); // Reuse parent class method
+        const details = this.getGameDetails(); 
         return `
             <div class="card">
                 <img src="${details.image}" class="card-img-top" alt="${details.name}">
@@ -79,12 +79,12 @@ function fetchGames() {
         .then(response => response.json())
         .then(data => {
             const games = data.map(gameData => {
-                // Encapsulation: Decision logic is abstracted to choose the correct game type
+                // Encapsulati
                 return gameData.type === 'OutdoorGame' 
                     ? new OutdoorGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link)
                     : new StreetGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link);
             });
-            renderGames(games); // Encapsulated logic to render all games
+            renderGames(games);
         })
         .catch(error => console.error('Error fetching games:', error));
 }
@@ -92,11 +92,11 @@ function fetchGames() {
 // Function to render the list of games in the DOM
 function renderGames(games) {
     const gamesList = document.getElementById("games-list").querySelector(".row");
-    gamesList.innerHTML = '';  // Clears existing games
+    gamesList.innerHTML = '';  
     games.forEach(game => {
         const gameCard = document.createElement("div");
         gameCard.classList.add("col-12", "col-md-4", "mb-4");
-        gameCard.innerHTML = game.renderCard();  // Encapsulation: Reuse renderCard for each game object
+        gameCard.innerHTML = game.renderCard(); 
         gamesList.appendChild(gameCard);
     });
 }
@@ -111,12 +111,12 @@ document.getElementById("gameSearchBar").addEventListener("input", function(e) {
                 game.game_name.toLowerCase().includes(query)
             );
             const games = filteredGames.map(gameData => {
-                // Encapsulation: Create filtered games with correct types
+               
                 return gameData.type === 'OutdoorGame' 
                     ? new OutdoorGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link)
                     : new StreetGame(gameData.game_id, gameData.game_name, gameData.game_image, gameData.game_link);
             });
-            renderGames(games); // Encapsulated logic to render filtered games
+            renderGames(games
         })
         .catch(error => console.error('Error filtering games:', error));
 });
